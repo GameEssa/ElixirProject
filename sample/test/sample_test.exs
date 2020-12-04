@@ -4,5 +4,6 @@ defmodule SampleTest do
 
   test "greets the world" do
     assert Sample.hello() == :world
+    assert Sample.hello() == :hello
   end
 end

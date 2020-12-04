@@ -7,7 +7,8 @@ defmodule Sample.MixProject do
       version: "0.1.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      escript: escript()
     ]
   end
 
@@ -25,5 +26,9 @@ defmodule Sample.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:ex_doc, "~> 0.21", only: :dev, runtime: false}
     ]
+  end
+
+  def escript do
+    [main_module: Executable.CLI]
   end
 end
