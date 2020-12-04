@@ -19,3 +19,16 @@ defmodule Executable.CLI do
     if opts[:upcase], do: String.upcase(word), else: word
   end
 end
+
+defmodule Example do
+  def explode, do: raise("Error") #exit(:kaboom)
+
+  def run do
+    Process.flag(:trap_exit, true)
+    try do
+      spawn_link(Example, :explode, [])
+    catch
+      {:EXIT, _from_pid, reason} -> IO.puts("Exit reason: #{reason}")
+    end
+  end
+end
