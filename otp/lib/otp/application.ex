@@ -10,7 +10,8 @@ defmodule Otp.Application do
     children = [
       # Starts a worker by calling: Otp.Worker.start_link(arg)
       # {Otp.Worker, arg}
-      {SampleQueue.Supervisor, []}
+      {Otp.SampleQueue.Supervisor, []},
+      {Otp.Supervisor, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -1,4 +1,4 @@
-defmodule SampleQueue.Supervisor do
+defmodule Otp.SampleQueue.Supervisor do
   use Supervisor
 
   def start_link(opts) do
