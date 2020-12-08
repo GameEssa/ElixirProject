@@ -43,4 +43,5 @@ defmodule KVTest do
     _ = KV.RegistryETS.create(registry, "bogus")
     assert KV.RegistryETS.lookup(registry, "shopping") == :error
   end
+
 end

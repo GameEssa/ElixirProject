@@ -1,0 +1,16 @@
+==> kv
+
+13:37:31.017 [info]  Listen Port 4040
+.....
+
+Finished in 0.03 seconds
+1 doctest, 4 tests, 0 failures
+
+Randomized with seed 21000
+==> kv_server
+
+
+Finished in 0.01 seconds
+0 failures
+
+Randomized with seed 21000
